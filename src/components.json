@@ -1,0 +1,4 @@
+{
+  "alert": "./packages/alert/index.js",
+  "message": "./packages/message/index.js"
+}

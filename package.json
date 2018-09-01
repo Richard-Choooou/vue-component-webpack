@@ -1,0 +1,49 @@
+{
+  "name": "travis-ci-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:entry && cross-env NODE_ENV=product webpack --config  ./build/webpack.pro.js --mode=production ",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config  ./build/webpack.dev.js --colors --mode=development ",
+    "new": "node ./build/bin/new.js",
+    "build:entry": "node ./build/bin/build-entry.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Richard-Choooou/travis-ci-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Richard-Choooou/travis-ci-test/issues"
+  },
+  "homepage": "https://github.com/Richard-Choooou/travis-ci-test#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
+    "file-save": "^0.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "json-templater": "^1.2.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "uppercamelcase": "^3.0.0",
+    "vue-loader": "^15.4.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-template-compiler": "2.5.17"
+  }
+}
