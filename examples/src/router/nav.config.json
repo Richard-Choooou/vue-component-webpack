@@ -1,0 +1,22 @@
+{
+  "main": {
+    "path": "./src/components/main.vue",
+    "cnName": "首页",
+    "vueRouterHref": "/main"
+  },
+  "alert": {
+    "path": "./src/doc/alert.md",
+    "cnName": "警告",
+    "vueRouterHref": "/alert"
+  },
+  "dialog": {
+    "path": "./src/doc/dialog.md",
+    "cnName": "对话",
+    "vueRouterHref": "/dialog"
+  },
+  "table": {
+    "path": "./src/doc/table.md",
+    "cnName": "表格",
+    "vueRouterHref": "/table"
+  }
+}

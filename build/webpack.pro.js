@@ -3,20 +3,31 @@ const merge = require('webpack-merge')
 const webpackBaseConfig = require('./webpack.base')
 const webpackCleanPlugin = require('clean-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
+const config = require('./config')
 const ENV = process.argv.NODE_ENV
 
 module.exports = merge(webpackBaseConfig, {
+    output: {
+        filename: 'senguo.m.ui.js',
+        path: path.resolve(config.basePath, './dist'),
+        publicPath: '/dist/',
+        libraryTarget: 'umd'
+    },
+    externals: {
+        vue: {
+            root: 'Vue',
+            commonjs: 'vue',
+            commonjs2: 'vue',
+            amd: 'vue'
+        }
+    },
     module: {
         rules: [
             {
-                test: /\.css$/, 
-                use:[{
-                    loader: 'vue-style-loader',
-                }]
-            }, 
-            {
-                test: /\.scss$/,
-                use: [miniCssExtractPlugin.loader, {loader: 'css-loader'}, {loader: 'sass-loader'}]
+                test: /\.(sc|c)ss$/,
+                use: [miniCssExtractPlugin.loader, 
+                {loader: 'css-loader'}, 
+                {loader: 'sass-loader'}]
             }
         ]
     },

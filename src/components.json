@@ -1,4 +1,14 @@
 {
-  "alert": "./packages/alert/index.js",
-  "message": "./packages/message/index.js"
+  "alert": {
+    "path": "./packages/alert/index.js",
+    "cnName": "警告"
+  },
+  "dialog": {
+    "path": "./packages/dialog/index.js",
+    "cnName": "对话"
+  },
+  "table": {
+    "path": "./packages/table/index.js",
+    "cnName": "表格"
+  }
 }

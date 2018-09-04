@@ -9,8 +9,16 @@ const config = require('./config')
 module.exports = merge(webpackBaseConfig, {
     module: {
         rules: [{
-            test: /\.scss$/,
-            use: [{loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'sass-loader'}]
+            test: /\.(sc|c)ss$/,
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'vue-style-loader',
+            }, {
+                loader: 'css-loader'
+            }, {
+                loader: 'sass-loader'
+            }]
         }]
     },
     devServer: {

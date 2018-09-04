@@ -5,5 +5,5 @@ module.exports = {
     srcPath: path.join(basePath, 'src'),
     examplesPath: path.join(basePath, 'examples'),
     packagesPath: path.join(basePath, 'src', 'packages'),
-    componentNamespace: '$sg'
+    componentNamespace: 'Sg'
 }

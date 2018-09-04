@@ -1,33 +1,41 @@
 {
-  "name": "travis-ci-test",
+  "name": "vue-component-webpack-config",
   "version": "1.0.0",
   "description": "",
   "main": "src/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:entry && cross-env NODE_ENV=product webpack --config  ./build/webpack.pro.js --mode=production ",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config  ./build/webpack.dev.js --colors --mode=development ",
-    "new": "node ./build/bin/new.js",
-    "build:entry": "node ./build/bin/build-entry.js"
+    "dev": "npm run before:dev && cross-env NODE_ENV=development webpack-dev-server --config  ./build/webpack.demo.js --colors --mode=development ",
+    "new": "node ./build/bin/new-component.js",
+    "remove": "node ./build/bin/remove-component.js",
+    "build:entry": "node ./build/bin/build-entry.js",
+    "build:route": "node ./build/bin/build-route.js",
+    "before:dev": "npm run build:entry && npm run build:route"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Richard-Choooou/travis-ci-test.git"
+    "url": "git+https://github.com/Richard-Choooou/vue-component-webpack.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Richard-Choooou/travis-ci-test/issues"
+    "url": "https://github.com/Richard-Choooou/vue-component-webpack/issues"
   },
-  "homepage": "https://github.com/Richard-Choooou/travis-ci-test#readme",
+  "homepage": "https://github.com/Richard-Choooou/vue-component-webpack",
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "8",
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^2.0.0",
     "file-save": "^0.2.0",
+    "fs-extra": "^7.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "json-templater": "^1.2.0",
@@ -37,13 +45,16 @@
     "style-loader": "^0.23.0",
     "uppercamelcase": "^3.0.0",
     "vue-loader": "^15.4.1",
+    "vue-markdown-loader": "^2.4.1",
+    "vue-template-compiler": "^2.5.17",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.7",
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0",
     "vue": "^2.5.17",
-    "vue-template-compiler": "2.5.17"
+    "vue-router": "^3.0.1"
   }
 }

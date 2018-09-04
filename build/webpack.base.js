@@ -1,5 +1,4 @@
 const path = require('path')
-const htmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const config  = require('./config')
 const ENV = process.env.NODE_ENV
@@ -7,28 +6,26 @@ const ENV = process.env.NODE_ENV
 
 module.exports = {
     entry: path.resolve(config.basePath, './src/entry.js'),
-    output: {
-        filename: 'senguo.m.ui.js',
-        path: path.resolve(config.basePath, './dist'),
-        libraryTarget: 'umd'
-    },
+    // output: {
+    //     filename: 'senguo.m.ui.js',
+    //     path: path.resolve(config.basePath, './dist'),
+    //     publicPath: '/dist/',
+    //     libraryTarget: 'umd'
+    // },
     resolve: {
         extensions: [".js", ".vue", ".json"],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
-            '@': config.srcPath
+            '@': config.srcPath,
+            '@examples': config.examplesPath
         }
     },  
-    externals: {
-        vue: {
-            root: 'Vue',
-            commonjs: 'vue',
-            commonjs2: 'vue',
-            amd: 'vue'
-        }
-    },
+    
     module: {
         rules: [{
+            test: /\.js$/,
+            loader: 'babel-loader'
+        }, {
             test: /\.vue$/,
             loader: 'vue-loader'
         }, {
@@ -46,10 +43,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new htmlWebpackPlugin({
-            template: './index.html',
-            inject: 'body'
-        }),
+        
         new VueLoaderPlugin()
     ]
 }

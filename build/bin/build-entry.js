@@ -13,7 +13,7 @@ let include = ''
 for(let name in components) {
     include += render(importSection, {
         name: getUnifiedName(name),
-        path: components[name]
+        path: components[name].path
     })
 }
 
@@ -33,6 +33,10 @@ const install = function(Vue) {
 /* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
+}
+
+export default {
+    install
 }
 `
 template = render(template, {
