@@ -1,5 +1,5 @@
 # webpack4.0-vue-components-config
-基于webpack4.0的一套打包自定义vue组件的脚手架配置
+基于webpack4.0的一套打包自定义vue组件的全自动脚手架配置
 
 ## 目录结构
 
