@@ -8,7 +8,7 @@ const ENV = process.argv.NODE_ENV
 
 module.exports = merge(webpackBaseConfig, {
     output: {
-        filename: 'senguo.m.ui.js',
+        filename: 'demo.m.ui.js',
         path: path.resolve(config.basePath, './dist'),
         publicPath: '/dist/',
         libraryTarget: 'umd'
@@ -41,7 +41,7 @@ module.exports = merge(webpackBaseConfig, {
             }
         ),
         new miniCssExtractPlugin({
-            filename: "[name].[hash].css"
+            filename: "demo.ui.min.css"
         })
     ]
 })

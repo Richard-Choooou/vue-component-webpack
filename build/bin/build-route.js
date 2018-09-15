@@ -47,7 +47,7 @@ function getImportString() {
     for(let name in components) {
         importString += render(importSection, {
             name: getUnifiedName(name),
-            path: path.resolve(config.examplesPath, components[name].path)
+            path: path.posix.relative('./src/router', components[name].path)
         })
     }
 

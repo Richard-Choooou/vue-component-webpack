@@ -3,10 +3,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const navConfig = require('./nav.config.json')
-import SgMain from '/Users/edz/Desktop/project/mobile_components_lib/examples/src/components/main.vue' 
-import SgAlert from '/Users/edz/Desktop/project/mobile_components_lib/examples/src/doc/alert.md' 
-import SgDialog from '/Users/edz/Desktop/project/mobile_components_lib/examples/src/doc/dialog.md' 
-import SgTable from '/Users/edz/Desktop/project/mobile_components_lib/examples/src/doc/table.md' 
+import SgMain from '../components/main.vue' 
+import SgAlert from '../doc/alert.md' 
+import SgDialog from '../doc/dialog.md' 
+import SgTable from '../doc/table.md' 
 
 
 Vue.use(Router)
