@@ -1,6 +1,47 @@
 # webpack4.0-vue-components-config
 基于webpack4.0的一套打包自定义vue组件的全自动脚手架配置
 
+
+
+## 基本命令
+|命令|说明|
+|----|----|
+|npm run dev|开发环境，可以边编写组件边预览|
+|npm run build|生产环境，打包组件库文件|
+|npm run new 英文名 中文名|用于新建组件 例如 npm run new test 测试|
+|npm run remove 英文名|用于删除组件以及配置文件 例如 npm run remove test, 强烈建议使用此命令删除组件|
+
+
+## 说明
+
+1. 使用npm run new *** *** 创建组件
+2. 会生成以下文件
+    
+    * [组件名].md       //用于组件示例以及文档编写
+
+    * [组件名].js       //组件的入口文件，用于挂载到Vue
+
+    * main.vue       //vue组件的源码
+
+    * main.scss      //vue组件的sass样式
+
+3. 会修改以下文件
+
+    * nav.config.json // 开发环境下的路由配置
+
+    * components.json // 组件的配置列表
+
+4. 使用npm run remove *** 会删除以及修改以上文件
+
+## 使用方式
+
+```
+import Vue from 'vue'
+import *** from '***'         //组件入口文件或者组件打包后的文件或者npm包名 
+
+Vue.use(***);
+```
+
 ## 目录结构
 
 ```
@@ -68,44 +109,4 @@
                 |-- mixins.scss
                 |-- variable.scss
 
-```
-
-## 基本命令
-
-> npm run dev                 //开发环境，可以边编写组件边预览
-
-> npm run build               //生产环境，打包组件库文件
-
-> npm run new 英文名 中文名     //用于新建组件 例如 npm run new test 测试
-
-> npm run remove 英文名        //用于删除组件以及配置文件 例如 npm run remove test, 强烈建议使用此命令删除组件
-
-## 说明
-
-1. 使用npm run new *** *** 创建组件
-2. 会生成以下文件
-    
-    * [组件名].md       //用于组件示例以及文档
-
-    * [组件名].js       //组件的入口文件，用于挂载到vue
-
-    * [main].vue       //vue组件的源码
-
-    * [main].scss      //vue组件的sass样式
-
-3. 会修改以下文件
-
-    * nav.config.json // 开发环境下的路由配置
-
-    * components.json // 组件的配置列表
-
-4. 使用npm run remove *** 会删除以及修改以上文件
-
-## 使用方式
-
-```
-import Vue from 'vue'
-import *** from '***'         //组件入口文件或者组件打包后的文件或者npm包名 
-
-Vue.use(***);
 ```
