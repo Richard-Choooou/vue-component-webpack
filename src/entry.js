@@ -3,9 +3,10 @@
 import SgAlert from './packages/alert/index.js' 
 import SgDialog from './packages/dialog/index.js' 
 import SgTable from './packages/table/index.js' 
+import SgTest from './packages/test/index.js' 
 
 
-const components = [SgAlert,SgDialog,SgTable]
+const components = [SgAlert,SgDialog,SgTable,SgTest]
 
 const install = function(Vue) {
     components.forEach(component => {

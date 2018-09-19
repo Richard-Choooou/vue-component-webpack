@@ -18,5 +18,10 @@
     "path": "./src/doc/table.md",
     "cnName": "表格",
     "vueRouterHref": "/table"
+  },
+  "test": {
+    "path": "./src/doc/test.md",
+    "cnName": "测试",
+    "vueRouterHref": "/test"
   }
 }

@@ -7,11 +7,12 @@ import SgMain from '../components/main.vue'
 import SgAlert from '../doc/alert.md' 
 import SgDialog from '../doc/dialog.md' 
 import SgTable from '../doc/table.md' 
+import SgTest from '../doc/test.md' 
 
 
 Vue.use(Router)
 
-const modules = [SgMain,SgAlert,SgDialog,SgTable]
+const modules = [SgMain,SgAlert,SgDialog,SgTable,SgTest]
 const routes = []
 
 Object.keys(navConfig).map((value, index) => {

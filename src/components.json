@@ -10,5 +10,9 @@
   "table": {
     "path": "./packages/table/index.js",
     "cnName": "表格"
+  },
+  "test": {
+    "path": "./packages/test/index.js",
+    "cnName": "测试"
   }
 }

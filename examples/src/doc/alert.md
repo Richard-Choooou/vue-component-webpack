@@ -11,7 +11,7 @@ export default {
     },
 
     created() {
-        alert('位于md文件中的alert')
+        alert('这是位于doc文件夹中的alert.md文件')
     }
 }
 </script>
