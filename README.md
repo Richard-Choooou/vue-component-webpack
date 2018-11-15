@@ -1,6 +1,8 @@
 # webpack4.0-vue-components-config
 基于webpack4.0的一套打包自定义vue组件的全自动脚手架配置
 
+使用此webpack配置开发vue组件，你只需要运行创建组件命令，即可完成文件的生成，组件的配置，运行打包命令，会自动将新组件加入库文件
+
 
 
 ## 基本命令
@@ -9,7 +11,7 @@
 |npm run dev|开发环境，可以边编写组件边预览|
 |npm run build|生产环境，打包组件库文件|
 |npm run new 英文名 中文名|用于新建组件 例如 npm run new test 测试|
-|npm run remove 英文名|用于删除组件以及配置文件 例如 npm run remove test, 强烈建议使用此命令删除组件|
+|npm run remove 英文名|用于删除组件以及配置文件 例如 npm run remove test, 强烈建议使用此命令删除组件|
 
 
 ## 说明
@@ -58,7 +60,7 @@ Vue.use(***);
     |   |-- webpack.dev.js                  //webpack开发环境配置
     |   |-- webpack.pro.js                  //webpack生产环境配置
     |   |-- bin
-    |   |   |-- build-entry.js              //通过命令生成lib入口文件
+    |   |   |-- build-entry.js              //通过命令生成lib入口文件
     |   |   |-- build-route.js              //通过命令生成开发环境路由配置
     |   |   |-- new-component.js            //通过命令创建组件
     |   |   |-- remove-component.js         //通过命令删除组件
@@ -104,7 +106,7 @@ Vue.use(***);
         |           |-- main.scss
         |           |-- main.vue
         |-- style                           //样式文件
-            |-- common                      //公共样式文件，组件会自动引入
+            |-- common                      //公共样式文件，组件会自动引入
                 |-- functions.scss
                 |-- mixins.scss
                 |-- variable.scss
