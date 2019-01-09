@@ -37,7 +37,7 @@ module.exports = merge(webpackBaseConfig, {
             ['../dist'], {
                 root: path.resolve(__dirname),
                 allowExternal: true,
-                exclude: ['vue.min,js']
+                exclude: ['vue.min.js']
             }
         ),
         new miniCssExtractPlugin({
